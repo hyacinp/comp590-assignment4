@@ -6,10 +6,10 @@
 1) Within the root directory of your project, start up Erlang:
 ``` erl ```
 
-2) Compile and run the serv_recv module:
+2) Compile and run the send_recv module:
 ```
-c(serv_recv). 
-serv_recv:start().
+c(send_recv). 
+send_recv:start().
 ```
 **Test all three servers to check that they are working how they are supposed to**
 

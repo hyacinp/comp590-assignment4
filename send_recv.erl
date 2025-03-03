@@ -27,9 +27,9 @@ serv1(Serv2) ->
         L when is_list(L) ->
             Serv2 ! L,
             serv1(Serv2);
-        {halt} -> 
-            io:format("(serv1) Halting...~n"),
-            Serv2 ! halt; % Forward halt to serv2
+        halt -> 
+            io:format("(serv1) Halting.~n"),
+            Serv2 ! halt;
         _Other -> 
             io:format("(serv1) Unknown message: ~p~n", [_Other]),
             Serv2 ! _Other,  
