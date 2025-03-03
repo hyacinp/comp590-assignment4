@@ -27,7 +27,7 @@ serv1(Serv2) ->
         L when is_list(L) ->
             Serv2 ! L,
             serv1(Serv2);
-        {halt} -> 
+        halt -> 
             io:format("(serv1) Halting...~n"),
             Serv2 ! halt; % Forward halt to serv2
         _Other -> 
